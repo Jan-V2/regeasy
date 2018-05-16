@@ -1,19 +1,25 @@
 
 grammar Regeasy;
-calc:   ((num|high_priority) NEWLINE)* ;
-num:    num high_opr (num|high_priority)
-    |   num low_opr (num|high_priority)
-    |   INT
-    ;
-high_priority: BR_OP num BR_CL;
-high_opr: (MUL|DIV);
-low_opr: (PLUS|MINUS);
+gramr      : then_block;
+group      : GROUP_OPEN then_block GROUP_CLOSE;
+then_block:  group
+           | THEN block (THEN|then_block|EOF);
+block      : STRING;
 
+
+SKIP_WS : ([ \t]+|[\r\n]+) -> skip ;
+STRING  :('\''|'"').*?('\''|'"');
 PLUS    : '+';
 MINUS   : '-';
 MUL     : '*';
 DIV     : '/';
 BR_OP   : '(';
 BR_CL   : ')';
-NEWLINE : [\r\n]+ ;
 INT     : [0-9]+ ;
+THEN    :('then'|'first');
+GROUP_CLOSE:'end';
+GROUP_OPEN:'group';
+
+
+
+

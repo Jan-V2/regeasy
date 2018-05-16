@@ -10,10 +10,11 @@ let lexer = new lang_lexer.RegeasyLexer(chars);
 let tokens  = new antlr4.CommonTokenStream(lexer);
 let parser = new lang_parser.RegeasyParser(tokens);
 parser.buildParseTrees = true;
-let tree = parser.calc();
-let obj_tree = parse_tree_to_obj(tree, parser.ruleNames).children[0];
+let tree = parser.gramr();
+let obj_tree = parse_tree_to_obj(tree, parser.ruleNames);
 
-console.log(JSON.stringify(obj_tree));
+dump_tokens();
+//console.log(JSON.stringify(obj_tree));
 
 function parse_tree_to_obj(tree, rule_names) {
     //todo switch this to using the rulenames
@@ -28,4 +29,9 @@ function parse_tree_to_obj(tree, rule_names) {
             children: children
         }
     }
+}
+
+function dump_tokens() {
+    let vocab = lang_lexer.RegeasyLexer.ruleNames;
+    tokens.tokens.forEach((t) => {console.log(vocab[t.type-1])});
 }
