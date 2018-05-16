@@ -19,10 +19,10 @@ var serializedATN = ["\u0003\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd",
     "\u0002\u0005\u0015\u0003\u0002\u0002\u0002\u0007\u0017\u0003\u0002\u0002",
     "\u0002\t\u0019\u0003\u0002\u0002\u0002\u000b\u001b\u0003\u0002\u0002",
     "\u0002\r\u001d\u0003\u0002\u0002\u0002\u000f \u0003\u0002\u0002\u0002",
-    "\u0011%\u0003\u0002\u0002\u0002\u0013\u0014\u0007,\u0002\u0002\u0014",
-    "\u0004\u0003\u0002\u0002\u0002\u0015\u0016\u00071\u0002\u0002\u0016",
-    "\u0006\u0003\u0002\u0002\u0002\u0017\u0018\u0007-\u0002\u0002\u0018",
-    "\b\u0003\u0002\u0002\u0002\u0019\u001a\u0007/\u0002\u0002\u001a\n\u0003",
+    "\u0011%\u0003\u0002\u0002\u0002\u0013\u0014\u0007-\u0002\u0002\u0014",
+    "\u0004\u0003\u0002\u0002\u0002\u0015\u0016\u0007/\u0002\u0002\u0016",
+    "\u0006\u0003\u0002\u0002\u0002\u0017\u0018\u0007,\u0002\u0002\u0018",
+    "\b\u0003\u0002\u0002\u0002\u0019\u001a\u00071\u0002\u0002\u001a\n\u0003",
     "\u0002\u0002\u0002\u001b\u001c\u0007*\u0002\u0002\u001c\f\u0003\u0002",
     "\u0002\u0002\u001d\u001e\u0007+\u0002\u0002\u001e\u000e\u0003\u0002",
     "\u0002\u0002\u001f!\t\u0002\u0002\u0002 \u001f\u0003\u0002\u0002\u0002",
@@ -47,25 +47,25 @@ RegeasyLexer.prototype = Object.create(antlr4.Lexer.prototype);
 RegeasyLexer.prototype.constructor = RegeasyLexer;
 
 RegeasyLexer.EOF = antlr4.Token.EOF;
-RegeasyLexer.T__0 = 1;
-RegeasyLexer.T__1 = 2;
-RegeasyLexer.T__2 = 3;
-RegeasyLexer.T__3 = 4;
-RegeasyLexer.T__4 = 5;
-RegeasyLexer.T__5 = 6;
+RegeasyLexer.PLUS = 1;
+RegeasyLexer.MINUS = 2;
+RegeasyLexer.MUL = 3;
+RegeasyLexer.DIV = 4;
+RegeasyLexer.BR_OP = 5;
+RegeasyLexer.BR_CL = 6;
 RegeasyLexer.NEWLINE = 7;
 RegeasyLexer.INT = 8;
 
 
 RegeasyLexer.modeNames = [ "DEFAULT_MODE" ];
 
-RegeasyLexer.literalNames = [ 'null', "'*'", "'/'", "'+'", "'-'", "'('", 
+RegeasyLexer.literalNames = [ 'null', "'+'", "'-'", "'*'", "'/'", "'('", 
                               "')'" ];
 
-RegeasyLexer.symbolicNames = [ 'null', 'null', 'null', 'null', 'null', 'null', 
-                               'null', "NEWLINE", "INT" ];
+RegeasyLexer.symbolicNames = [ 'null', "PLUS", "MINUS", "MUL", "DIV", "BR_OP", 
+                               "BR_CL", "NEWLINE", "INT" ];
 
-RegeasyLexer.ruleNames = [ "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", 
+RegeasyLexer.ruleNames = [ "PLUS", "MINUS", "MUL", "DIV", "BR_OP", "BR_CL", 
                            "NEWLINE", "INT" ];
 
 RegeasyLexer.grammarFileName = "Regeasy.g4";

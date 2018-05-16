@@ -11,21 +11,48 @@ function RegeasyListener() {
 RegeasyListener.prototype = Object.create(antlr4.tree.ParseTreeListener.prototype);
 RegeasyListener.prototype.constructor = RegeasyListener;
 
-// Enter a parse tree produced by RegeasyParser#prog.
-RegeasyListener.prototype.enterProg = function(ctx) {
+// Enter a parse tree produced by RegeasyParser#calc.
+RegeasyListener.prototype.enterCalc = function(ctx) {
 };
 
-// Exit a parse tree produced by RegeasyParser#prog.
-RegeasyListener.prototype.exitProg = function(ctx) {
+// Exit a parse tree produced by RegeasyParser#calc.
+RegeasyListener.prototype.exitCalc = function(ctx) {
 };
 
 
-// Enter a parse tree produced by RegeasyParser#expr.
-RegeasyListener.prototype.enterExpr = function(ctx) {
+// Enter a parse tree produced by RegeasyParser#num.
+RegeasyListener.prototype.enterNum = function(ctx) {
 };
 
-// Exit a parse tree produced by RegeasyParser#expr.
-RegeasyListener.prototype.exitExpr = function(ctx) {
+// Exit a parse tree produced by RegeasyParser#num.
+RegeasyListener.prototype.exitNum = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#high_priority.
+RegeasyListener.prototype.enterHigh_priority = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#high_priority.
+RegeasyListener.prototype.exitHigh_priority = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#high_opr.
+RegeasyListener.prototype.enterHigh_opr = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#high_opr.
+RegeasyListener.prototype.exitHigh_opr = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#low_opr.
+RegeasyListener.prototype.enterLow_opr = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#low_opr.
+RegeasyListener.prototype.exitLow_opr = function(ctx) {
 };
 
 
