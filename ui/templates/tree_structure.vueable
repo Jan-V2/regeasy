@@ -1,0 +1,13 @@
+<li>
+  % :class="{bold: isFolder}" @click="toggle" =>
+  <div>
+    {{ model.node }}
+    % v-if="isFolder" =>
+    <span>[{{ open ? '-' : '+' }}]</span>
+  </div>
+  <ul v-show="open" v-if="isFolder">
+    % v-for="(model, index) in model.children" :key="index" :model="model" =>
+    <item class="item">
+    </item>
+  </ul>
+</li>
