@@ -20,15 +20,6 @@ RegeasyListener.prototype.exitGramr = function(ctx) {
 };
 
 
-// Enter a parse tree produced by RegeasyParser#group.
-RegeasyListener.prototype.enterGroup = function(ctx) {
-};
-
-// Exit a parse tree produced by RegeasyParser#group.
-RegeasyListener.prototype.exitGroup = function(ctx) {
-};
-
-
 // Enter a parse tree produced by RegeasyParser#then_block.
 RegeasyListener.prototype.enterThen_block = function(ctx) {
 };
@@ -38,12 +29,66 @@ RegeasyListener.prototype.exitThen_block = function(ctx) {
 };
 
 
+// Enter a parse tree produced by RegeasyParser#group.
+RegeasyListener.prototype.enterGroup = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#group.
+RegeasyListener.prototype.exitGroup = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#endgroup.
+RegeasyListener.prototype.enterEndgroup = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#endgroup.
+RegeasyListener.prototype.exitEndgroup = function(ctx) {
+};
+
+
 // Enter a parse tree produced by RegeasyParser#block.
 RegeasyListener.prototype.enterBlock = function(ctx) {
 };
 
 // Exit a parse tree produced by RegeasyParser#block.
 RegeasyListener.prototype.exitBlock = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#branch.
+RegeasyListener.prototype.enterBranch = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#branch.
+RegeasyListener.prototype.exitBranch = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#string.
+RegeasyListener.prototype.enterString = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#string.
+RegeasyListener.prototype.exitString = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#regex.
+RegeasyListener.prototype.enterRegex = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#regex.
+RegeasyListener.prototype.exitRegex = function(ctx) {
+};
+
+
+// Enter a parse tree produced by RegeasyParser#char_class.
+RegeasyListener.prototype.enterChar_class = function(ctx) {
+};
+
+// Exit a parse tree produced by RegeasyParser#char_class.
+RegeasyListener.prototype.exitChar_class = function(ctx) {
 };
 
 

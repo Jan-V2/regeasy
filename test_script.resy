@@ -1,4 +1,6 @@
 first "bla"
+group
 then "something else"
 then "bleeh"
-then "test"
+endgroup
+then ("test"|"asdf"or"xcvz")

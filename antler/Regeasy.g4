@@ -1,25 +1,26 @@
 
 grammar Regeasy;
-gramr      : then_block;
-group      : GROUP_OPEN then_block GROUP_CLOSE;
-then_block:  group
-           | THEN block (THEN|then_block|EOF);
-block      : STRING;
+gramr      : (then_block|group|endgroup)* EOF;
+then_block : THEN block NL;
+group      : 'group' NL;
+endgroup   : 'endgroup' NL;
+block      : branch
+           | string
+           | regex
+           ;
+branch     : '(' string (OR string)+ ')';//should this be called branch
+string     : STRING;
+regex      : REGEX;
+char_class : '['']';
 
 
-SKIP_WS : ([ \t]+|[\r\n]+) -> skip ;
-STRING  :('\''|'"').*?('\''|'"');
-PLUS    : '+';
-MINUS   : '-';
-MUL     : '*';
-DIV     : '/';
-BR_OP   : '(';
-BR_CL   : ')';
+STRING  : ('\''|'"').*?('\''|'"');
+REGEX   : '/'.+?'/';
+SKIP_WS : ([ \t]+) -> skip ;
+NL      : [\r\n]+;
+OR      : ('|'|'or');
 INT     : [0-9]+ ;
-THEN    :('then'|'first');
-GROUP_CLOSE:'end';
-GROUP_OPEN:'group';
-
-
-
-
+THEN    : ('then'|'first');
+THROUGH : ('-'|'through');
+SOME    : ('+'|'some');
+ANY     : ('*'|'any');
