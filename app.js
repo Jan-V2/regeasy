@@ -4,7 +4,7 @@ let lang_lexer = require("./antler/RegeasyLexer");
 let lang_parser = require("./antler/RegeasyParser");
 let fs = require("fs");
 
-let input = fs.readFileSync("./test_script.resy", "utf8");
+let input = fs.readFileSync("./test/test_script.resy", "utf8");
 let chars = new antlr4.InputStream(input);
 let lexer = new lang_lexer.RegeasyLexer(chars);
 let tokens = new antlr4.CommonTokenStream(lexer);

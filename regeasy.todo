@@ -1,0 +1,35 @@
+
+☐ create a script that automatically builds the site to something that would work on github pages.
+
+gramar:
+  ✔ add plus @done(2018-05-21 19:24) @project(gramar)
+  ✔ add wildcard @done(2018-05-21 19:24) @project(gramar)
+  ✘ add question mark @cancelled(2018-05-21 19:24) @project(gramar)
+
+ast validator:
+  ☐ escape strings
+ast parser:
+  ☐ auto generate a node_type lookup table for easier refactoring.
+      this should include auto renaming the eval methods, if possible.
+  ☐ autogenerate error handeling?
+  ☐ have links in the error report
+  ☐ add monkeytests
+      somehow get a list of tokens and just try to parse it.
+      it should either throw an error, or produce valid regex.
+        actually i problably shouldn't entirely randomly generate 
+website parts:
+  ☐ editor window.
+  ☐ test text.
+  ☐ error window.
+  ☐ 
+testing:
+  ☐ 
+  
+notes:
+  errorhandeling should be done by 
+  1 looking for error nodes in the ast to make sure all chars lext correctlly
+  2 checking if the provided ast will produce valid regex
+  
+  if a problem is found, go up one node and discribe the error with a link to documentation.
+  
+  

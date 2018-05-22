@@ -1,0 +1,8 @@
+first some not [whitespace]
+then "@"
+group
+then some not [whispace
+endgroup
+then "."
+then s;ome not [whitespace] k
+l,m

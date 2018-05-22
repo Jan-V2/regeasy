@@ -1,6 +1,0 @@
-first "bla"
-group
-then "something else"
-then "bleeh"
-endgroup
-then ("test"|"asdf"or"xcvz")

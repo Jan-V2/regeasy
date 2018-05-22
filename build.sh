@@ -9,4 +9,5 @@ node app.js > ./ui/test_tree.json
 echo running linter
 ./node_modules/.bin/eslint app.js --fix
 ./node_modules/.bin/eslint ./ui/*.js --fix
+./node_modules/.bin/eslint ./test/*.js --fix
 echo build complete
